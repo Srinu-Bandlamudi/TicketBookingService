@@ -1,6 +1,6 @@
 const { StatusCodes }=require('http-status-codes');
 
-class ServiceError extends Eroor{
+class ServiceError extends Error{
     constructor(
         message='Something went wrong',
         explanation='Service layer error',
