@@ -10,14 +10,19 @@
 
 3. **Environment Setup**
    - Create a `.env` file in the root directory and add the following environment variable:
-     ```plaintext
-    PORT=3002
-    FLIGHT_SERVICE_PATH='http://localhost:3000'
-    MESSAGE_BROKER_URL='amqp://localhost'
-    EXCHANGE_NAME=AIRLINE_BOOKING
-    REMINDER_BINDING_KEY=REMINDER_SERVICE
+     ```
+        - PORT=3002
+
+        - FLIGHT_SERVICE_PATH='http://localhost:3000'
+
+        - MESSAGE_BROKER_URL='amqp://localhost'
+
+        - EXCHANGE_NAME=AIRLINE_BOOKING
+
+        - REMINDER_BINDING_KEY=REMINDER_SERVICE
      ```
    - Inside the `src/config` folder, create a file `config.json` with the following content:
+
      ```json
      {
        "development": {
@@ -28,6 +33,7 @@
          "dialect": "mysql"
        }
      }
+     
      ```
 
 4. **Database Setup**
@@ -44,7 +50,7 @@
 
     - The Booking model is a key component of the Ticket Booking Service. It manages booking information related to
       flights, including the following fields:
-      
+
         ```
         flightId: References the flight associated with the booking.
         userId: References the user making the booking.
